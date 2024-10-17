@@ -1,0 +1,91 @@
+<!-- <div class="container">
+  <h2 class="mt-4">Add New Contact</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input id="firstName" formControlName="firstName" class="form-control" required />
+      <div
+        *ngIf="contactForm.get('firstName')?.invalid && (contactForm.get('firstName')?.touched || contactForm.get('firstName')?.dirty)">
+        <small class="text-danger">First Name is required.</small>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input id="lastName" formControlName="lastName" class="form-control" required />
+      <div
+        *ngIf="contactForm.get('lastName')?.invalid && (contactForm.get('lastName')?.touched || contactForm.get('lastName')?.dirty)">
+        <small class="text-danger">Last Name is required.</small>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input id="email" formControlName="email" class="form-control" required />
+      <div
+        *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty)">
+        <small class="text-danger">A valid email is required.</small>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Add Contact</button>
+  </form>
+</div> -->
+<!-- 
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit() ">
+  <div class="form-group ">
+    <label for="firstName">First Name</label>
+    <input id="firstName" class="form-control " formControlName="firstName" placeholder="Enter First Name">
+    <div *ngIf="contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched" class="text-danger">
+      First Name is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input id="lastName" class="form-control" formControlName="lastName" placeholder="Enter Last Name">
+    <div *ngIf="contactForm.get('lasstName')?.invalid && contactForm.get('lastName')?.touched" class="text-danger">
+      Last Name is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input id="email" class="form-control" formControlName="email" placeholder="Enter Email">
+    <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+      Email is required and must be a valid email.
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button>
+</form> -->
+
+
+
+<form class="row g-3" [formGroup]="contactForm" (ngSubmit)="onSubmit() ">
+  <div class="col-md-6">
+    <label for="firstName" class="form-label">First Name</label>
+    <input class="form-control" id="firstName" formControlName="firstName" placeholder="Enter First Name">
+    <div *ngIf="contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched" class="text-danger">
+      First Name is required.
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="lastName" class="form-label">Last Name</label>
+    <input id="lastName" class="form-control" formControlName="lastName" placeholder="Enter Last Name">
+    <div *ngIf="contactForm.get('lastName')?.invalid && contactForm.get('lastName')?.touched" class="text-danger">
+      Last Name is required.
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="email" class="form-label">Email</label>
+    <input id="email" class="form-control" formControlName="email" placeholder="Enter Email">
+    <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+      Email is required and must be a valid email.
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter password">
+    <div *ngIf="contactForm.get('password')?.invalid && contactForm.get('password')?.touched" class="text-danger">
+      password is required.
+    </div>
+  </div>
+  <div class=" col-12">
+    <button type="submit" class="btn btn-success">Save</button>
+  </div>
+</form>
